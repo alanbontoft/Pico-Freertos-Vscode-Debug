@@ -9,17 +9,19 @@ MathClass::~MathClass()
 {
 }
 
-int MathClass::multiply(int a,int b)
+int MathClass::multiply(int a)
 {
-    return a * b;
+    return a * _value;
 }
 
-void MathClass::increment(void)
+void MathClass::inc(void)
 {
     _value++;
 }
 
-void MathClass::set(int i)
+void MathClass::dec(void)
 {
-    _value = i;
+    _value--;
 }
+
+

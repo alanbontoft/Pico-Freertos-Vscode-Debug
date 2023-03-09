@@ -23,9 +23,9 @@ void led_task(void*)
         gpio_put(LED_PIN, 0);
         vTaskDelay(10 * pMath->value());
 
-        pMath->increment();
+        pMath->inc();
 
-        if (pMath->value() == 11) pMath->set(1);
+        if (pMath->value() == 11) pMath->setValue(1);
     }
 }
 

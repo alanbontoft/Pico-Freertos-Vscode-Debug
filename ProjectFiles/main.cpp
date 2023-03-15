@@ -35,11 +35,13 @@ void led_task(void*)
     while (true)
     {
         delay = fast ? 10 : 50;
-        for (int i=0; i < 10; i++)
+        for (int i=0; i < 5; i++)
         {
             gpio_put(LED_PIN, 1);
+            printf("LED On\n");
             vTaskDelay(delay);
             gpio_put(LED_PIN, 0);
+            printf("LED Off\n");
             vTaskDelay(delay);
         }
 
